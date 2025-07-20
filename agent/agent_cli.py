@@ -40,7 +40,6 @@ def main():
         if not results:
             print("Nenhum veículo encontrado com esses filtros.")
         else:
-            print(f"Encontrados {results} \n")
             for car in results:
                 print(f"{car['marca']} {car['modelo']} {car['ano']} | {car['cor']} | {car['quilometragem']} km | R$ {car['preco']:.2f}")
     except Exception as e:
