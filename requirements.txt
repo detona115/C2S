@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+faker
+httpx
+pytest
+prompt_toolkit
+requests
