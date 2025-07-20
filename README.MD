@@ -17,6 +17,8 @@
   - [Como Rodar](#como-rodar)
     - [Servidor FastAPI](#servidor-fastapi)
     - [Agente Virtual (Terminal)](#agente-virtual-terminal)
+    - [Build e execução do servidor via Docker (Opcional)](#build-e-execução-do-servidor-via-docker-opcional)
+    - [Agente Virtual no Docker (Terminal)](#agente-virtual-no-docker-terminal)
   - [API (Protocolo MCP)](#api-protocolo-mcp)
   - [Agente Virtual no Terminal](#agente-virtual-no-terminal)
   - [Testes Automatizados](#testes-automatizados)
@@ -138,6 +140,20 @@ Em outro terminal:
 
 ```sh
 python agent/agent_cli.py
+```
+
+### Build e execução do servidor via Docker (Opcional)
+
+ ```sh
+docker build -t c2s-app .
+docker run --rm -p 8000:8000 c2s-app
+```
+
+### Agente Virtual no Docker (Terminal)
+Em outro terminal:
+
+```sh
+docker exec -it <container_id> python agent/agent_cli.py
 ```
 
 ---
