@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/badge/implemented%20by-Andy-blue)](https://www.linkedin.com/in/andy-kiaka-76a983110/)
 
 # C2S
----
+
 
 ## Sumário
 
@@ -97,14 +97,13 @@ C2S/
 
 ### Pré-requisitos
 
-- Python 3.8+
-- (Opcional) Docker
+- Python 3.10+
 
 ### Instalação
 
 1. Clone o repositório:
    ```sh
-   git clone <seu-repo>
+   git clone https://github.com/detona115/C2S.git
    cd C2S
    ```
 2. Crie e ative o ambiente virtual:
