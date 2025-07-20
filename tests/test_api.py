@@ -1,6 +1,18 @@
 import pytest
 from fastapi.testclient import TestClient
 from app.main import app
+from app.database import init_db
+from app.seed import seed_db
+
+
+@pytest.fixture(scope="session", autouse=True)
+def setup_database():
+    init_db()
+
+@pytest.fixture(scope="session", autouse=True)
+def setup_database():
+    init_db()
+    seed_db(10)
 
 client = TestClient(app)
 
