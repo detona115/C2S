@@ -37,3 +37,15 @@ jobs:
     - name: Test with pytest
       run: |
         python -m pytest
+
+  docker-test:
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t c2s-app .
+
+      - name: Run tests inside Docker
+        run: docker run --rm c2s-app pytest
